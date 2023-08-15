@@ -1,13 +1,20 @@
-Install Docker in your server or local pc
-docker desktop will have all things we wants 
+### pre requestes
 
-creat redis and redis-commandar containers 
-
+#### * docker and docker-compose should be available in your server or local-pc(docker desktop is the easiest way)
+#### * Node js should be there 
+#### deploye redis and redis-commander in docker
+```sh
 docker-compose up
+```
+#### install node dependencies 
+```sh
+npm i
+```
 
-
-run you express server 
-
+#### run the server
+```sh
 node app.js
+```
+
 
 
