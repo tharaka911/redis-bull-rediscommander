@@ -5,6 +5,9 @@ const Queue = require('bull');
 const app = express();
 const port = 3000;
 
+app.use(express.json());
+
+
 // Create a Bull queue named "dataQueue"
 const dataQueue = new Queue('dataQueue', {
   redis: {
