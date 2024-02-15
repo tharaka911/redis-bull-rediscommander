@@ -19,8 +19,7 @@ app.use(express.json());
 // });
 
 const dataQueue = new Queue('dataQueue', 'redis://redisuser1:JPyc5of217yduIEaMow3@localhost:6380/0?protocol=3');
-// const dataQueue = new Queue('dataQueue', 'redis://default:qLjDCiz2tjT8tLXK0rCY@localhost:6379/0?protocol=3');
-//const dataQueue = new Queue('dataQueue', 'redis://redisuser2:qLjDCiz2tjT8tLXK0rCY@localhost:6379/0?protocol=3');
+
 
 
 
