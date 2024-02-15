@@ -9,13 +9,20 @@ app.use(express.json());
 
 
 // Create a Bull queue named "dataQueue"
-const dataQueue = new Queue('dataQueue', {
-  redis: {
-    // Set your Redis configuration here
-    host: 'localhost', // Change this to your Redis host
-    port: 6379, // Change this to your Redis port
-  },
-});
+// const dataQueue = new Queue('dataQueue', {
+//   redis: {
+//     // Set your Redis configuration here
+//     host: 'localhost', // Change this to your Redis host
+//     port: 6379, // Change this to your Redis port
+
+//   },
+// });
+
+const dataQueue = new Queue('dataQueue', 'redis://redisuser1:JPyc5of217yduIEaMow3@localhost:6380/0?protocol=3');
+// const dataQueue = new Queue('dataQueue', 'redis://default:qLjDCiz2tjT8tLXK0rCY@localhost:6379/0?protocol=3');
+//const dataQueue = new Queue('dataQueue', 'redis://redisuser2:qLjDCiz2tjT8tLXK0rCY@localhost:6379/0?protocol=3');
+
+
 
 // Endpoint to add data to the queue
 app.post('/adding-data', async (req, res) => {
